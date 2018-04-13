@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0431DE332079EF49008A366C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431DE322079EF49008A366C /* FirstViewController.m */; };
+		0431DE362079EF54008A366C /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431DE352079EF54008A366C /* SecViewController.m */; };
+		043E165E208041CF003A6DA4 /* TapSliderScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E165C208041CF003A6DA4 /* TapSliderScrollView.m */; };
+		04DE2ABB2073114200501443 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2ABA2073114200501443 /* AppDelegate.m */; };
+		04DE2ABE2073114200501443 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2ABD2073114200501443 /* ViewController.m */; };
+		04DE2AC12073114200501443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2ABF2073114200501443 /* Main.storyboard */; };
+		04DE2AC32073114300501443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2AC22073114300501443 /* Assets.xcassets */; };
+		04DE2AC62073114300501443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2AC42073114300501443 /* LaunchScreen.storyboard */; };
+		04DE2AC92073114300501443 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2AC82073114300501443 /* main.m */; };
+		04DE2AD32073114300501443 /* TapScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2AD22073114300501443 /* TapScrollViewTests.m */; };
+		04DE2ADE2073114300501443 /* TapScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2ADD2073114300501443 /* TapScrollViewUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04DE2ACF2073114300501443 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04DE2AAE2073114200501443 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04DE2AB52073114200501443;
+			remoteInfo = TapScrollView;
+		};
+		04DE2ADA2073114300501443 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04DE2AAE2073114200501443 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04DE2AB52073114200501443;
+			remoteInfo = TapScrollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0431DE312079EF49008A366C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		0431DE322079EF49008A366C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		0431DE342079EF54008A366C /* SecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
+		0431DE352079EF54008A366C /* SecViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecViewController.m; sourceTree = "<group>"; };
+		043E165C208041CF003A6DA4 /* TapSliderScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapSliderScrollView.m; sourceTree = "<group>"; };
+		043E165D208041CF003A6DA4 /* TapSliderScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapSliderScrollView.h; sourceTree = "<group>"; };
+		04DE2AB62073114200501443 /* TapScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DE2AB92073114200501443 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04DE2ABA2073114200501443 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04DE2ABC2073114200501443 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04DE2ABD2073114200501443 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04DE2AC02073114200501443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04DE2AC22073114300501443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04DE2AC52073114300501443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04DE2AC72073114300501443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04DE2AC82073114300501443 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04DE2ACE2073114300501443 /* TapScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DE2AD22073114300501443 /* TapScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapScrollViewTests.m; sourceTree = "<group>"; };
+		04DE2AD42073114300501443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04DE2AD92073114300501443 /* TapScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DE2ADD2073114300501443 /* TapScrollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapScrollViewUITests.m; sourceTree = "<group>"; };
+		04DE2ADF2073114300501443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04DE2AB32073114200501443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DE2ACB2073114300501443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DE2AD62073114300501443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		043E165B208041CF003A6DA4 /* TapSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				043E165D208041CF003A6DA4 /* TapSliderScrollView.h */,
+				043E165C208041CF003A6DA4 /* TapSliderScrollView.m */,
+			);
+			path = TapSliderView;
+			sourceTree = "<group>";
+		};
+		04DE2AAD2073114200501443 = {
+			isa = PBXGroup;
+			children = (
+				04DE2AB82073114200501443 /* TapScrollView */,
+				04DE2AD12073114300501443 /* TapScrollViewTests */,
+				04DE2ADC2073114300501443 /* TapScrollViewUITests */,
+				04DE2AB72073114200501443 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04DE2AB72073114200501443 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2AB62073114200501443 /* TapScrollView.app */,
+				04DE2ACE2073114300501443 /* TapScrollViewTests.xctest */,
+				04DE2AD92073114300501443 /* TapScrollViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04DE2AB82073114200501443 /* TapScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2AB92073114200501443 /* AppDelegate.h */,
+				04DE2ABA2073114200501443 /* AppDelegate.m */,
+				04DE2ABC2073114200501443 /* ViewController.h */,
+				04DE2ABD2073114200501443 /* ViewController.m */,
+				0431DE312079EF49008A366C /* FirstViewController.h */,
+				0431DE322079EF49008A366C /* FirstViewController.m */,
+				0431DE342079EF54008A366C /* SecViewController.h */,
+				0431DE352079EF54008A366C /* SecViewController.m */,
+				043E165B208041CF003A6DA4 /* TapSliderView */,
+				04DE2ABF2073114200501443 /* Main.storyboard */,
+				04DE2AC22073114300501443 /* Assets.xcassets */,
+				04DE2AC42073114300501443 /* LaunchScreen.storyboard */,
+				04DE2AC72073114300501443 /* Info.plist */,
+				04DE2AC82073114300501443 /* main.m */,
+			);
+			path = TapScrollView;
+			sourceTree = "<group>";
+		};
+		04DE2AD12073114300501443 /* TapScrollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2AD22073114300501443 /* TapScrollViewTests.m */,
+				04DE2AD42073114300501443 /* Info.plist */,
+			);
+			path = TapScrollViewTests;
+			sourceTree = "<group>";
+		};
+		04DE2ADC2073114300501443 /* TapScrollViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2ADD2073114300501443 /* TapScrollViewUITests.m */,
+				04DE2ADF2073114300501443 /* Info.plist */,
+			);
+			path = TapScrollViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04DE2AB52073114200501443 /* TapScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DE2AE22073114300501443 /* Build configuration list for PBXNativeTarget "TapScrollView" */;
+			buildPhases = (
+				04DE2AB22073114200501443 /* Sources */,
+				04DE2AB32073114200501443 /* Frameworks */,
+				04DE2AB42073114200501443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapScrollView;
+			productName = TapScrollView;
+			productReference = 04DE2AB62073114200501443 /* TapScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04DE2ACD2073114300501443 /* TapScrollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DE2AE52073114300501443 /* Build configuration list for PBXNativeTarget "TapScrollViewTests" */;
+			buildPhases = (
+				04DE2ACA2073114300501443 /* Sources */,
+				04DE2ACB2073114300501443 /* Frameworks */,
+				04DE2ACC2073114300501443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04DE2AD02073114300501443 /* PBXTargetDependency */,
+			);
+			name = TapScrollViewTests;
+			productName = TapScrollViewTests;
+			productReference = 04DE2ACE2073114300501443 /* TapScrollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04DE2AD82073114300501443 /* TapScrollViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DE2AE82073114300501443 /* Build configuration list for PBXNativeTarget "TapScrollViewUITests" */;
+			buildPhases = (
+				04DE2AD52073114300501443 /* Sources */,
+				04DE2AD62073114300501443 /* Frameworks */,
+				04DE2AD72073114300501443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04DE2ADB2073114300501443 /* PBXTargetDependency */,
+			);
+			name = TapScrollViewUITests;
+			productName = TapScrollViewUITests;
+			productReference = 04DE2AD92073114300501443 /* TapScrollViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04DE2AAE2073114200501443 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Joker;
+				TargetAttributes = {
+					04DE2AB52073114200501443 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					04DE2ACD2073114300501443 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 04DE2AB52073114200501443;
+					};
+					04DE2AD82073114300501443 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 04DE2AB52073114200501443;
+					};
+				};
+			};
+			buildConfigurationList = 04DE2AB12073114200501443 /* Build configuration list for PBXProject "TapScrollView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04DE2AAD2073114200501443;
+			productRefGroup = 04DE2AB72073114200501443 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04DE2AB52073114200501443 /* TapScrollView */,
+				04DE2ACD2073114300501443 /* TapScrollViewTests */,
+				04DE2AD82073114300501443 /* TapScrollViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04DE2AB42073114200501443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DE2AC62073114300501443 /* LaunchScreen.storyboard in Resources */,
+				04DE2AC32073114300501443 /* Assets.xcassets in Resources */,
+				04DE2AC12073114200501443 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DE2ACC2073114300501443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DE2AD72073114300501443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04DE2AB22073114200501443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043E165E208041CF003A6DA4 /* TapSliderScrollView.m in Sources */,
+				0431DE362079EF54008A366C /* SecViewController.m in Sources */,
+				04DE2ABE2073114200501443 /* ViewController.m in Sources */,
+				04DE2AC92073114300501443 /* main.m in Sources */,
+				0431DE332079EF49008A366C /* FirstViewController.m in Sources */,
+				04DE2ABB2073114200501443 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DE2ACA2073114300501443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DE2AD32073114300501443 /* TapScrollViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DE2AD52073114300501443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DE2ADE2073114300501443 /* TapScrollViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04DE2AD02073114300501443 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04DE2AB52073114200501443 /* TapScrollView */;
+			targetProxy = 04DE2ACF2073114300501443 /* PBXContainerItemProxy */;
+		};
+		04DE2ADB2073114300501443 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04DE2AB52073114200501443 /* TapScrollView */;
+			targetProxy = 04DE2ADA2073114300501443 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04DE2ABF2073114200501443 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04DE2AC02073114200501443 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04DE2AC42073114300501443 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04DE2AC52073114300501443 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04DE2AE02073114300501443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04DE2AE12073114300501443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04DE2AE32073114300501443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TapScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04DE2AE42073114300501443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TapScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04DE2AE62073114300501443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TapScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapScrollView.app/TapScrollView";
+			};
+			name = Debug;
+		};
+		04DE2AE72073114300501443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TapScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapScrollView.app/TapScrollView";
+			};
+			name = Release;
+		};
+		04DE2AE92073114300501443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TapScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TapScrollView;
+			};
+			name = Debug;
+		};
+		04DE2AEA2073114300501443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TapScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TapScrollView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04DE2AB12073114200501443 /* Build configuration list for PBXProject "TapScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DE2AE02073114300501443 /* Debug */,
+				04DE2AE12073114300501443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DE2AE22073114300501443 /* Build configuration list for PBXNativeTarget "TapScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DE2AE32073114300501443 /* Debug */,
+				04DE2AE42073114300501443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DE2AE52073114300501443 /* Build configuration list for PBXNativeTarget "TapScrollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DE2AE62073114300501443 /* Debug */,
+				04DE2AE72073114300501443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DE2AE82073114300501443 /* Build configuration list for PBXNativeTarget "TapScrollViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DE2AE92073114300501443 /* Debug */,
+				04DE2AEA2073114300501443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04DE2AAE2073114200501443 /* Project object */;
+}
