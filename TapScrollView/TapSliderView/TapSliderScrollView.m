@@ -195,28 +195,32 @@
 -(void)scrollToIndex:(NSInteger)index
 {
     
-    UIButton *selectBtn = _buttonViewArr[index];
-    
-    UIButton *lastSelectBtn = _buttonViewArr[_currentSelectIndex];
-    
-    selectBtn.selected = YES;
-    
-    lastSelectBtn.selected = NO;
-    
-    _currentSelectIndex = index;
-    //点击滑动scroView
-    [UIView animateWithDuration:0.15 animations:^{
+    if (_currentSelectIndex != index) {
         
-        CGPoint center = self->_lineView.center;
+        UIButton *selectBtn = _buttonViewArr[index];
         
-        center.x = selectBtn.center.x;
+        UIButton *lastSelectBtn = _buttonViewArr[_currentSelectIndex];
         
-        self->_lineView.center = center;
+        selectBtn.selected = YES;
+        
+        lastSelectBtn.selected = NO;
+        
+        _currentSelectIndex = index;
+        //点击滑动scroView
+        [UIView animateWithDuration:0.15 animations:^{
+            
+            CGPoint center = self->_lineView.center;
+            
+            center.x = selectBtn.center.x;
+            
+            self->_lineView.center = center;
+            
+        } completion:^(BOOL finished) {
+            
+            
+        }];
+    }
 
-    } completion:^(BOOL finished) {
-    
-
-    }];
 }
 #pragma mark 外部滑动的方法 主动调用
 -(void)sliderToViewIndex:(NSInteger)index
