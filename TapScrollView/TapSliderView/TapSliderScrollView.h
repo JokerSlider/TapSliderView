@@ -18,7 +18,9 @@
 
 @interface TapSliderScrollView : UIView
 
-@property (nonatomic,strong)    UIScrollView *pageScrollView;
+@property (nonatomic,strong) UIScrollView *pageScrollView;
+
+@property (nonatomic,strong) UIScrollView *lineScrollView;//顶端控件底部滑动视图
 
 @property (nonatomic,weak)id <SliderLineViewDelegate> delegate;
 
@@ -29,6 +31,8 @@
 @property (nonatomic,copy)UIColor  *sliderViewColor;//滑动条颜色
 
 @property (nonatomic,copy)UIColor  *selectedColor;//button选中的颜色
+
+@property (nonatomic,assign)NSInteger  btnWidth;//控件的宽度
 
 /**
  初始化创建方法

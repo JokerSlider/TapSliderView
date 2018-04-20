@@ -30,6 +30,8 @@
     UIView *_lineView;
     
     NSInteger  _currentSelectIndex;//当前选中
+    
+    NSInteger  _arrayCount;//数量
 
 }
 
@@ -48,6 +50,9 @@
         self.sliderViewColor = self.sliderViewColor ? self.sliderViewColor : Base_Orange;
         //button选中的颜色
         self.selectedColor = self.selectedColor? self.selectedColor : Base_Orange;
+        
+        //控件宽度
+        self.btnWidth = self.btnWidth? self.btnWidth : 80;
     }
     return self;
 }
@@ -56,14 +61,38 @@
 #pragma mark 创建视图
 -(void)createView:(NSArray *)titleArr andViewArr:(NSArray *)viewArr andRootVc:(UIViewController *)rootVC
 {
+    
+    _arrayCount = viewArr.count;
     //当前的选中下标
     _currentSelectIndex = 0;
+    
+    CGFloat alexHeight = 43;
+    
+    //存放按钮的数组 --  方便在滑动时修改他的选中颜色
+    _buttonViewArr = [NSMutableArray array];
+    //滑块的宽度
+    _width = self.btnWidth;
+    
+    _lineScrollView = ({
+        UIScrollView *view = [UIScrollView new];
+        view.pagingEnabled = YES;
+        view.contentSize = CGSizeMake(titleArr.count*_width, alexHeight);
+        view.frame = CGRectMake(0, 0, ScreenWidth, alexHeight);
+        view.showsVerticalScrollIndicator = NO;
+        view.showsHorizontalScrollIndicator = NO;
+        view.bounces = NO;
+        view.delegate = self;
+        view;
+    });
+    
+    [self addSubview:_lineScrollView];
+    
     //滑动的底部视图
     _pageScrollView = ({
         UIScrollView *view = [UIScrollView new];
         view.pagingEnabled = YES;
         view.contentSize = CGSizeMake(titleArr.count*ScreenWidth, ScreenHeight);
-        view.frame = CGRectMake(0, 43, ScreenWidth, ScreenHeight);
+        view.frame = CGRectMake(0, alexHeight, ScreenWidth, ScreenHeight);
         view.showsVerticalScrollIndicator = NO;
         view.showsHorizontalScrollIndicator = NO;
         view.bounces = NO;
@@ -72,12 +101,6 @@
     });
     
     [self addSubview:_pageScrollView];
-
-    //存放按钮的数组 --  方便在滑动时修改他的选中颜色
-    _buttonViewArr = [NSMutableArray array];
-    
-    //滑块的宽度
-    _width = ScreenWidth/titleArr.count;
     
     //遍历外部传入的标题数组  创建顶部button
     for (int i = 0; i<titleArr.count; i++) {
@@ -98,13 +121,13 @@
         
         funcBtn.frame = CGRectMake(i*_width, 0, _width, 40);
         
-        [self addSubview:funcBtn];
+        [_lineScrollView addSubview:funcBtn];
         
         UIViewController *contr=viewArr[i];
         //添加子view
         UIView *childDrenView =contr.view;
         
-        childDrenView.frame = CGRectMake(i*ScreenWidth, 0, ScreenWidth, self.frame.size.height-43);
+        childDrenView.frame = CGRectMake(i*ScreenWidth, 0, ScreenWidth, self.frame.size.height-alexHeight);
         
         childDrenView.tag =  i;
         
@@ -125,13 +148,13 @@
     
     _currentSelectIndex = 0;
     
-    _lineView.frame = CGRectMake(0, 40, _width/3, 2);
+    _lineView.frame = CGRectMake(0, 40, _width, 2);
 
     _lineView.center = CGPointMake(firstBtn.center.x, 40);
     
     _lineView.backgroundColor = self.sliderViewColor;
     
-    [self addSubview:_lineView];
+    [_lineScrollView addSubview:_lineView];
     
     //底部横线
     UIView *bottomlineView = ({
@@ -140,20 +163,10 @@
         view;
     });
     
-    bottomlineView.frame = CGRectMake(0, 43, ScreenWidth, 1);
+    bottomlineView.frame = CGRectMake(0, alexHeight, ScreenWidth, 1);
     
-    [self addSubview:bottomlineView];
-    
-    //如果标题只有两个 那中间添加分割线
-    if (titleArr.count == 2) {
-        UIView *horiznView = ({
-            UIView *view = [UIView new];
-            view.backgroundColor = RGB(239, 240, 241);
-            view;
-        });
-        horiznView.frame = CGRectMake(self.center.x, 0, 1, 43);
-        [self addSubview:horiznView];
-    }
+    [_lineScrollView addSubview:bottomlineView];
+
     
 }
 
@@ -161,20 +174,59 @@
 //滑动代理事件，滑动时修改按钮的选中位置 和  修改滑块的位置  和 修改页面
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSInteger currentAdPage;
     
-    currentAdPage= _pageScrollView.contentOffset.x/_pageScrollView.bounds.size.width;
-    
-    [self scrollToIndex:currentAdPage];
-    
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(sliderViewAndReloadData:)] ) {
+    if ([scrollView isEqual:_pageScrollView]) {
         
-        [self.delegate sliderViewAndReloadData:currentAdPage];
+        NSInteger currentAdPage;
         
+        currentAdPage= _pageScrollView.contentOffset.x/_pageScrollView.bounds.size.width;
+        
+        //滑动顶端视图
+        [self lineScroViewScroll:currentAdPage];
+        
+        [self scrollToIndex:currentAdPage];
+        
+        if (self.delegate&&[self.delegate respondsToSelector:@selector(sliderViewAndReloadData:)] ) {
+            
+            [self.delegate sliderViewAndReloadData:currentAdPage];
+        }
+        
+       
+    }else{
+        
+        NSLog(@"我是顶端的");
     }
-
 }
-
+#pragma mark 顶端滑动
+-(void)lineScroViewScroll:(NSInteger)currentAdPage
+{
+    
+    //顶端的滑动视图    超过屏幕宽度自动计算宽度并进行滑动
+    
+    UIButton *selectBtn = _buttonViewArr[currentAdPage];
+    
+    CGFloat  originX = selectBtn.frame.origin.x + selectBtn.frame.size.width;
+    
+    [UIView animateWithDuration:0.15 animations:^{
+        
+        if (originX > ScreenWidth) {
+            
+            self->_lineScrollView.contentOffset = CGPointMake(selectBtn.frame.size.width*(originX - ScreenWidth)/self.btnWidth+30, 0);
+            
+        }else if(originX<=self.btnWidth) {
+            
+            self->_lineScrollView.contentOffset = CGPointMake(-selectBtn.frame.size.width/2, 0);
+            
+        }
+        
+    } completion:^(BOOL finished) {
+        
+        
+    }];
+    
+    
+    
+}
 #pragma TapAction  手动点击滑块时执行的方法  包括页面、滑动条、顶部按钮的切换
 -(void)changeAnimation:(UIButton *)sender
 {
@@ -182,7 +234,11 @@
     NSInteger index = (NSInteger)sender.tag;
         
     self->_pageScrollView.contentOffset = CGPointMake(index * self->_pageScrollView.frame.size.width, 0);
- 
+    
+    //顶端控件跟随滑
+    [self lineScroViewScroll:index];
+    
+    //滑动到指定页面
     [self scrollToIndex:index];
     
     if (self.delegate&&[self.delegate respondsToSelector:@selector(sliderViewAndReloadData:)] ) {
@@ -191,7 +247,7 @@
         
     }
 }
-//统一方法  滑动到指定页面
+#pragma mark  统一方法  滑动到指定页面
 -(void)scrollToIndex:(NSInteger)index
 {
     
@@ -225,19 +281,7 @@
 #pragma mark 外部滑动的方法 主动调用
 -(void)sliderToViewIndex:(NSInteger)index
 {
-//    if (!_currentSelectIndex) {
-//        _currentSelectIndex = 0;
-//    }
-//
-//    UIButton *selectBtn = _buttonViewArr[index];
-//
-//    UIButton *lastSelectBtn = _buttonViewArr[_currentSelectIndex];
-//
-//    selectBtn.selected = YES;
-//
-//    lastSelectBtn.selected = NO;
-//
-//    _currentSelectIndex = index;
+
     
     self->_pageScrollView.contentOffset = CGPointMake(index * self->_pageScrollView.frame.size.width, 0);
     
