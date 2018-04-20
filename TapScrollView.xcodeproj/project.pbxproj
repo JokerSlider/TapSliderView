@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04194F172089CE7E004A32D0 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04194F142089CE7E004A32D0 /* SegmentView.swift */; };
+		04194F182089CE7E004A32D0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04194F152089CE7E004A32D0 /* Config.swift */; };
 		0431DE332079EF49008A366C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431DE322079EF49008A366C /* FirstViewController.m */; };
 		0431DE362079EF54008A366C /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431DE352079EF54008A366C /* SecViewController.m */; };
 		043E165E208041CF003A6DA4 /* TapSliderScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E165C208041CF003A6DA4 /* TapSliderScrollView.m */; };
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04194F142089CE7E004A32D0 /* SegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		04194F152089CE7E004A32D0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		04194F162089CE7E004A32D0 /* TapScrollView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TapScrollView-Bridging-Header.h"; sourceTree = "<group>"; };
 		0431DE312079EF49008A366C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		0431DE322079EF49008A366C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		0431DE342079EF54008A366C /* SecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
@@ -99,9 +104,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04194F132089CE7E004A32D0 /* TapSliderView-swift */ = {
+			isa = PBXGroup;
+			children = (
+				04194F142089CE7E004A32D0 /* SegmentView.swift */,
+				04194F152089CE7E004A32D0 /* Config.swift */,
+			);
+			path = "TapSliderView-swift";
+			sourceTree = "<group>";
+		};
 		043E165B208041CF003A6DA4 /* TapSliderView */ = {
 			isa = PBXGroup;
 			children = (
+				04194F162089CE7E004A32D0 /* TapScrollView-Bridging-Header.h */,
 				043E165D208041CF003A6DA4 /* TapSliderScrollView.h */,
 				043E165C208041CF003A6DA4 /* TapSliderScrollView.m */,
 			);
@@ -147,6 +162,7 @@
 				0456824020886FC3002A94CD /* FiveViewController.m */,
 				0456824220886FCC002A94CD /* SixViewController.h */,
 				0456824320886FCC002A94CD /* SixViewController.m */,
+				04194F132089CE7E004A32D0 /* TapSliderView-swift */,
 				043E165B208041CF003A6DA4 /* TapSliderView */,
 				04DE2ABF2073114200501443 /* Main.storyboard */,
 				04DE2AC22073114300501443 /* Assets.xcassets */,
@@ -242,6 +258,7 @@
 				TargetAttributes = {
 					04DE2AB52073114200501443 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					04DE2ACD2073114300501443 = {
 						CreatedOnToolsVersion = 9.3;
@@ -308,7 +325,9 @@
 				0456824120886FC3002A94CD /* FiveViewController.m in Sources */,
 				043E165E208041CF003A6DA4 /* TapSliderScrollView.m in Sources */,
 				0456823B20886FB2002A94CD /* ThreeViewController.m in Sources */,
+				04194F172089CE7E004A32D0 /* SegmentView.swift in Sources */,
 				0456823E20886FBC002A94CD /* ForthViewController.m in Sources */,
+				04194F182089CE7E004A32D0 /* Config.swift in Sources */,
 				0431DE362079EF54008A366C /* SecViewController.m in Sources */,
 				04DE2ABE2073114200501443 /* ViewController.m in Sources */,
 				04DE2AC92073114300501443 /* main.m in Sources */,
@@ -483,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TapScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,6 +511,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TapScrollView/TapSliderView/TapScrollView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -499,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TapScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,6 +531,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Joker.TapScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TapScrollView/TapSliderView/TapScrollView-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -514,6 +540,7 @@
 		04DE2AE62073114300501443 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TapScrollViewTests/Info.plist;
@@ -532,6 +559,7 @@
 		04DE2AE72073114300501443 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TapScrollViewTests/Info.plist;
@@ -550,6 +578,7 @@
 		04DE2AE92073114300501443 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TapScrollViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -567,6 +596,7 @@
 		04DE2AEA2073114300501443 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TapScrollViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

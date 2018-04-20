@@ -159,11 +159,11 @@
     //底部横线
     UIView *bottomlineView = ({
         UIView *view = [UIView new];
-        view.backgroundColor = RGB(239, 240, 241);
+        view.backgroundColor = [UIColor redColor];
         view;
     });
     
-    bottomlineView.frame = CGRectMake(0, alexHeight, ScreenWidth, 1);
+    bottomlineView.frame = CGRectMake(0, alexHeight-1, self.lineScrollView.contentSize.width + 60, 1);
     
     [_lineScrollView addSubview:bottomlineView];
 
@@ -217,6 +217,9 @@
             
             self->_lineScrollView.contentOffset = CGPointMake(-selectBtn.frame.size.width/2, 0);
             
+        }else{
+            
+            NSLog(@"在屏幕内滑动，不做任何操作");
         }
         
     } completion:^(BOOL finished) {
