@@ -24,6 +24,7 @@
 		04DE2AC92073114300501443 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2AC82073114300501443 /* main.m */; };
 		04DE2AD32073114300501443 /* TapScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2AD22073114300501443 /* TapScrollViewTests.m */; };
 		04DE2ADE2073114300501443 /* TapScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2ADD2073114300501443 /* TapScrollViewUITests.m */; };
+		04F6DAB6208D65B8007921BA /* SimpleTapSliderScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F6DAB4208D65B8007921BA /* SimpleTapSliderScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		04DE2AD92073114300501443 /* TapScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DE2ADD2073114300501443 /* TapScrollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapScrollViewUITests.m; sourceTree = "<group>"; };
 		04DE2ADF2073114300501443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F6DAB4208D65B8007921BA /* SimpleTapSliderScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTapSliderScrollView.m; sourceTree = "<group>"; };
+		04F6DAB5208D65B8007921BA /* SimpleTapSliderScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTapSliderScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,7 @@
 				0456824020886FC3002A94CD /* FiveViewController.m */,
 				0456824220886FCC002A94CD /* SixViewController.h */,
 				0456824320886FCC002A94CD /* SixViewController.m */,
+				04F6DAB3208D65B8007921BA /* SimpSliderView */,
 				04194F132089CE7E004A32D0 /* TapSliderView-swift */,
 				043E165B208041CF003A6DA4 /* TapSliderView */,
 				04DE2ABF2073114200501443 /* Main.storyboard */,
@@ -189,6 +193,15 @@
 				04DE2ADF2073114300501443 /* Info.plist */,
 			);
 			path = TapScrollViewUITests;
+			sourceTree = "<group>";
+		};
+		04F6DAB3208D65B8007921BA /* SimpSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				04F6DAB4208D65B8007921BA /* SimpleTapSliderScrollView.m */,
+				04F6DAB5208D65B8007921BA /* SimpleTapSliderScrollView.h */,
+			);
+			path = SimpSliderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +341,7 @@
 				04194F172089CE7E004A32D0 /* SegmentView.swift in Sources */,
 				0456823E20886FBC002A94CD /* ForthViewController.m in Sources */,
 				04194F182089CE7E004A32D0 /* Config.swift in Sources */,
+				04F6DAB6208D65B8007921BA /* SimpleTapSliderScrollView.m in Sources */,
 				0431DE362079EF54008A366C /* SecViewController.m in Sources */,
 				04DE2ABE2073114200501443 /* ViewController.m in Sources */,
 				04DE2AC92073114300501443 /* main.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-//#import "TapSliderScrollView.h"
+#import "TapSliderScrollView.h"
 #import "FirstViewController.h"
 #import "SecViewController.h"
 #import "ThreeViewController.h"
@@ -15,11 +15,13 @@
 #import "FiveViewController.h"
 #import "SixViewController.h"
 #import "TapScrollView-Swift.h"
+
+#import "SimpleTapSliderScrollView.h"
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface ViewController ()<SliderLineViewDelegate>
+@interface ViewController ()<SliderLineViewDelegate,SimpleSliderLineViewDelegate>
 
 @end
 
@@ -52,35 +54,42 @@
 
     SecViewController *vc12 = [[SecViewController alloc]init];
 
-    /*  OC 版本的初始化方法
+    /**<***************************************    OC版本   多个页面的初始化方法  大于3个  ****************************************>*/
+    /*
     TapSliderScrollView *view = [[TapSliderScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     view.delegate = self;
-    //设置滑动条的颜色
     view.sliderViewColor = [UIColor greenColor];
     view.titileColror = [UIColor blackColor];
     view.selectedColor = [UIColor redColor];
     view.btnWidth = 60;//控件宽度
-    [view createView:@[@"精品1",@"精品2",@"精品3",@"精品4",@"精品5",@"精品6",@"精品7",@"精品8",@"精品9",@"精品10",@"精品11",@"精品12"] andViewArr:@[vc1,vc2,vc3,vc4,vc5,vc6,vc7,vc8,vc9,vc10,vc11,vc12] andRootVc:self];
+    [view createView:@[@"精品1",@"精品2",@"精品3",@"精品4",@"精品5"] andViewArr:@[vc1,vc2,vc3,vc4,vc5] andRootVc:self];
     [self.view addSubview:view];
-
-    //自动滑动到第二页
     [view sliderToViewIndex:1];
+    */
     
-     */
-    SegmentView *view = [[SegmentView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-    view.delegate = self;
-    //设置滑动条的颜色
-    view.sliderViewColor = [UIColor greenColor];
-    view.titileColror = [UIColor blackColor];
-    view.selectedColor = [UIColor redColor];
-//    view.b
+    ///<***************************************    Swift 版本   多于3个页面的初始化方法  ****************************************>
+    /*
+        SegmentView *view = [[SegmentView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+        view.delegate = self;
+        view.sliderViewColor = [UIColor greenColor];
+        view.titileColror = [UIColor blackColor];
+        view.selectedColor = [UIColor redColor];
+        [view createViewWithTitileArr:@[@"精品1",@"精品2",@"精品3",@"精品4",@"精品5"] ViewControllerArr:@[vc1,vc2,vc3,vc4,vc5] RootVC:self];
+        [self.view addSubview:view];
     
+        [view sliderToViewIndex:1];
+    */
     
-    [view createViewWithTitileArr:@[@"精品1",@"精品2",@"精品3",@"精品4",@"精品5",@"精品6",@"精品7",@"精品8",@"精品9",@"精品10",@"精品11",@"精品12"] ViewControllerArr:@[vc1,vc2,vc3,vc4,vc5,vc6,vc7,vc8,vc9,vc10,vc11,vc12] RootVC:self];
-    [self.view addSubview:view];
-    //自动滑动到第二页
-    [view sliderToViewIndexWithIndex:1];
+    ///<***************************************   OC版本   最多3个页面的初始化方法  均分屏幕宽 ****************************************>
+    SimpleTapSliderScrollView *simpleview = [[SimpleTapSliderScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    simpleview.delegate = self;
+    simpleview.sliderViewColor = [UIColor greenColor];
+    simpleview.titileColror = [UIColor blackColor];
+    simpleview.selectedColor = [UIColor redColor];
+    [simpleview createView:@[@"精品1",@"精品2"] andViewArr:@[vc1,vc2] andRootVc:self];
+    [self.view addSubview:simpleview];
     
+    [simpleview sliderToViewIndex:1];
 }
 #pragma mark sliderDelegate -- OC
 -(void)sliderViewAndReloadData:(NSInteger)index
